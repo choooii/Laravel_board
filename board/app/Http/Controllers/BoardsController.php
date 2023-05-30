@@ -2,7 +2,7 @@
 /*****************************************************
  * 프로젝트명   : laravel_board
  * 디렉토리     : Controllers
- * 파일명       : BoardController.php
+ * 파일명       : BoardsController.php
  * 이력         : v001 0526 AR.Choe new
  *                v002 0530 AR.Choe 유효성체크 추가
  *****************************************************/
