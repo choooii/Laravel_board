@@ -23,6 +23,14 @@ class BoardsController extends Controller
      */
     public function index()
     {
+        // *** v002 add start
+        // 로그인 체크
+        // todo protected 메소드로 따로 만들어 호출
+        if(auth()->guest()) {
+            return redirect()->route('users.login');
+        }
+        // *** v002 add end
+
         $result = Boards::select(['id', 'title', 'hits', 'created_at', 'updated_at'])
                         ->orderBy('hits', 'desc')
                         ->get();

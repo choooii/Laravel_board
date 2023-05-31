@@ -4,9 +4,8 @@
 
 @section('contents')
     <h1>로그인</h1>
-    <div>
-        @include('layout.errorsValidate')
-    </div>
+    @include('layout.errorsValidate')
+    <div>{{session()->has('success') ? session('success') : ""}}</div>
     <form action="{{route('users.login.post')}}" method="post">
         @csrf
         <label for="email">ID : </label>

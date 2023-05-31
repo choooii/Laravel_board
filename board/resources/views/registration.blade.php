@@ -10,7 +10,7 @@
         <label for="name">NAME : </label>
         <input type="text" name="name" id="name">
         <br>
-        <label for="email">ID : </label>
+        <label for="email">EMAIL : </label>
         <input type="text" name="email" id="email">
         <br>
         <label for="password">PW : </label>
