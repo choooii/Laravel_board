@@ -118,8 +118,9 @@ class UserController extends Controller
     public function editpost(Request $req) {
         $arrKey = [];
 
-        $users = User::find(Auth::User()->id); // 세션에 pk 저장하는 것보다 보안적으로 더 좋을 수 있음
-
+        $users = Auth::user(); // 세션에 pk 저장하는 것보다 보안적으로 더 좋을 수 있음
+        // $users = $req->user();  // 이 방법도 가능
+        
         if (Hash::check($req->password, $users->password)) {
             return redirect()->back()->with('error', '기존 비밀번호와 일치합니다.');
         }
